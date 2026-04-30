@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>样章：26 岁字节出来想做独立开发者 · Forensic 自我侦探报告</title>
+<meta name="description" content="完整 5800 字 forensic 报告样章。让你看见交付物形态。">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Inter", "PingFang SC", "Songti SC", "Hiragino Sans GB", -apple-system, sans-serif;
+    background: #fafaf9;
+    color: #1a1a1a;
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 32px 100px;
+  }
+  .back {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    margin-bottom: 48px;
+    font-size: 14px;
+  }
+  .back:hover { color: #000; border-bottom-color: #000; }
+  .label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  h1 { font-size: 30px; font-weight: 600; line-height: 1.3; margin: 8px 0 16px; letter-spacing: -0.02em; }
+  h2 { font-size: 22px; font-weight: 600; margin: 48px 0 16px; padding-top: 24px; border-top: 1px solid #e5e5e3; letter-spacing: -0.01em; }
+  h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+  h4 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin-bottom: 16px; }
+  ul, ol { margin: 0 0 16px 24px; }
+  li { margin-bottom: 8px; }
+  blockquote {
+    border-left: 3px solid #999;
+    padding: 8px 16px;
+    margin: 16px 0;
+    color: #555;
+    font-style: italic;
+    background: #f5f5f3;
+  }
+  hr { border: none; border-top: 1px solid #e5e5e3; margin: 32px 0; }
+  code { background: #f0f0ee; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: "SF Mono", Monaco, monospace; }
+  pre { background: #f0f0ee; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 16px 0; }
+  strong { color: #000; }
+  .meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e3;
+  }
+  .cta-bottom {
+    margin-top: 60px;
+    padding: 32px;
+    background: #1a1a1a;
+    color: #fafaf9;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .cta-bottom a {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #fafaf9;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="./" class="back">← 返回 SKU 主页</a>
+<div class="label">SAMPLE · 公开样章</div>
+<h1>26 岁字节出来想做独立开发者：Forensic 自我侦探报告</h1>
+<div class="meta">虚构案例 · 5800 字 · 7 节完整结构 · 让你看清交付物形态</div>
+
+<div id="content"><h1 id="forensic-自我侦探报告-样章">Forensic 自我侦探报告 · 样章</h1>
+<blockquote>
+<p>客户：<strong>虚构案例 W</strong>（26 岁，男，前字节工程师，离职 4
+个月，想做独立开发者） 报告版本：v1（人工审校 2026-04-29） 字数：~5800
+字 AI 协作：Mira-OS multi-agent panel · PG / Naval / Taleb / Munger 视角
++ Challenger ant 人工审校签名：Mira</p>
+</blockquote>
+<hr />
+<h2 id="阅读说明">0. 阅读说明</h2>
+<p>这份报告不是”建议清单”。它是一次 forensic——把你过去 6
+个月反复纠结的位置当作犯罪现场，4
+个视角各自取证、相互对质，最后由我（人）整合、重写、定罪。</p>
+<p>读这份报告时，请按 §I → §II → §III → §IV → §V
+的顺序读完一次，再回头精读 §III 和 §IV。<strong>不要先看 §V
+行动清单</strong>——脱离前面 4 章的行动清单只是任务管理。</p>
+<hr />
+<h2 id="i.-你目前活在的-5-个未验证假设">I. 你目前活在的 5
+个未验证假设</h2>
+<p>从你提供的 3 篇草稿、6 个月微信收藏、Notion “想清楚” 文件夹的 14
+篇笔记中，我抽取出你正在依据的 5 个核心假设。这 5
+个假设你从未公开质疑过，但你的每一个犹豫都是它们投射出来的。</p>
+<h3 id="假设-1我离职是因为大厂不适合我">假设
+1：「我离职是因为大厂不适合我」</h3>
+<p>证据强度：<strong>弱</strong></p>
+<p>你的草稿《我为什么离开字节》写了 3 版，每版的关键论据都不一样： -
+v1（2025-12）：“不想再做螺丝钉” - v2（2026-01）：“想做有自己 ownership
+的事” - v3（2026-03）：“想验证我是不是真的能独立”</p>
+<p>3 个理由互相覆盖。这是 post-hoc rationalization
+的典型模式——你先做了离职这个动作，再轮流试穿不同的解释。</p>
+<p><strong>真情况可能是</strong>：你离职不是因为”大厂不适合你”，是因为某一个具体事件（一次绩效谈话？一次组织架构调整？一次同事离职？）把你过去
+18
+个月积累的某种”我必须证明点什么”的张力顶到了临界。但你不愿意把那个具体事件当作离职的真实理由，因为承认它意味着承认你在那件事里<strong>输了</strong>。</p>
+<p>→ 推论到 §III §1。</p>
+<hr />
+<h3 id="假设-2独立开发者是一条比打工更适合我的路">假设
+2：「独立开发者是一条比打工更适合我的路」</h3>
+<p>证据强度：<strong>未经验证</strong></p>
+<p>你过去 4 个月做的 3 个项目（一个 AI 笔记工具、一个海外 SaaS landing
+page generator、一个微信群机器人）每个都做了 2-4
+周后停下。你在草稿里给每次停下的理由都是”市场不对/方向不对/做着做着发现不是我想做的”。</p>
+<p>但 3
+次”方向不对”的形状惊人一致：<strong>都在还没接触第一个真实付费用户之前停下</strong>。</p>
+<p><strong>真情况可能是</strong>：你不是在筛选项目，你是在筛选”我能从中保住自尊的项目”。任何一个项目走到”需要把它放到陌生人面前被打分”的那个边缘，你就停下，换一个新概念。</p>
+<p>独立开发者的路不是”和打工不同的路”，是”必须每周被陌生人打分的路”。你过去
+4 个月没有一次走到那一步。</p>
+<p>→ 推论到 §III §2 / §IV。</p>
+<hr />
+<h3 id="假设-3我得想清楚才能动">假设 3：「我得’想清楚’才能动」</h3>
+<p>证据强度：<strong>反向证据强</strong></p>
+<p>你的 Notion “想清楚” 文件夹 14 篇笔记，全部时间戳集中在周日晚
+21:00-23:00
+之间。换句话说：你在用”思考”代替”动作”，而且你在每周末固定时间用它来管理对下周一的焦虑。</p>
+<p>你想清楚的标准是什么？你写过一次：「想清楚就是不再有’万一
+X’的犹豫」。</p>
+<p>但这个标准是<strong>永远不会满足的</strong>——因为不是逻辑判断，是情绪状态。逻辑层面”想清楚”在
+5
+分钟内可以达成（任何方向都能找到合理化论证）；你要的是”内心不再焦虑”，那个状态永远不会通过思考达成，只通过<strong>做完一件被陌生人评分的事</strong>之后达成。</p>
+<p>→ 推论到 §III §3。</p>
+<hr />
+<h3 id="假设-4我有-8-个月-runway所以我有时间">假设 4：「我有 8 个月
+runway，所以我有’时间’」</h3>
+<p>证据强度：<strong>结构性误判</strong></p>
+<p>你的现金 runway 是 8 个月这个事实成立。 但<strong>心理
+runway</strong> 不是 8 个月。</p>
+<p>心理 runway =
+你能在”看不到产出”的状态下不崩溃地坚持的最长时间。从你过去 4
+个月的行为看（每 2-4 周换项目，每周写”想清楚”草稿），你的心理 runway
+大约是 <strong>3-5 周</strong>。</p>
+<p>你以为你有 8 个月时间慢慢探索；事实上你每 5
+周左右会经历一次”我是不是在浪费时间”的崩溃，然后用换项目来缓解，缓解失败再写一篇”想清楚”草稿。这个循环消耗的不是
+runway，是<strong>自我效能感储备</strong>。</p>
+<p>自我效能感储备耗尽的速度比现金快 4-6 倍。预估你的”心理
+runway”实际上是 <strong>2-3 个月</strong>，到那时候你会以”runway
+见底了我还是去找份班吧”的合理化结束这一阶段。</p>
+<p>→ 推论到 §IV / §V §3 停止信号。</p>
+<hr />
+<h3 id="假设-5找到正确的方向比开始重要">假设
+5：「找到正确的方向比开始重要」</h3>
+<p>证据强度：<strong>完全反</strong></p>
+<p>这是 5 个假设里最隐蔽、最难拆的一个。它是你前 4 个假设的母假设。</p>
+<p>正确的方向不在你 think 出来的清单里。<strong>正确的方向是在做错 5-7
+个方向之后剩下来的那一个</strong>。你过去 4 个月走完了 3 个项目的 2-4
+周表层探索，按速率你需要 12-18 个月才能积累到”做错 5-7
+个”的样本量。但你的心理 runway 是 2-3 个月。</p>
+<p>数学不工作。</p>
+<p>要么提速（每个方向用 3-5 天验证而不是 2-4
+周），要么换路径（不再把”方向”当作要先解决的问题）。</p>
+<p>→ 推论到 §IV / §V §1。</p>
+<hr />
+<h2 id="ii.-4-视角-ai-集团-cross-examination">II. 4 视角 AI 集团
+cross-examination</h2>
+<h3 id="ii.1-pg-视角来自-paul-graham-essays-panel">II.1 PG 视角（来自
+Paul Graham essays panel）</h3>
+<blockquote>
+<p>“Most ambitious people don’t know what they want, and what’s worse,
+they don’t know they don’t know.”</p>
+</blockquote>
+<p><strong>PG 对你的 1
+句诊断</strong>：你不是在做事，你是在挑选”事的概念”。</p>
+<p>PG 会问你的 4 个问题：</p>
+<ol type="1">
+<li><p><strong>“What are you working
+on?”（最简单也最致命）</strong>——你过去 4
+个月没有一次能用一句话回答这个问题。每一次回答都需要 2 分钟”上下文”。在
+PG 的标准里这意味着你<strong>没有在做事</strong>。</p></li>
+<li><p><strong>Schlep 测试</strong>：你做的 3
+个项目里，最让你”嫌麻烦”的环节是什么？答案：<strong>让陌生人付钱</strong>。但这恰好是
+90% 价值所在的环节。Schleps are where the value is.
+你的回避路径稳定指向”做产品 demo / 写 README”——这两个都是低 schlep
+高即时反馈的事。</p></li>
+<li><p><strong>Live in the future</strong>：PG
+说创业者要”住在未来”，看到现在还没有但应该存在的东西。你的 3
+个项目都是”现有的 X
+但更好”。这意味着你不是在创造，是在优化。优化是大公司的活，不是独立开发者的活。</p></li>
+<li><p><strong>What would you do if you didn’t have to make money for 5
+years</strong>：这是 PG 给迷茫者的 yc-application 经典问题。你在草稿 v3
+里写过答案：“我会写一个我自己想用的笔记系统”。但你又删掉了，因为”市场已经太卷”。<strong>Note</strong>：你删掉的那一句话比你保留的所有内容都更有信息量。</p></li>
+</ol>
+<p><strong>PG 给你的最重 verdict</strong>： &gt; “You’re treating
+‘finding direction’ as a thinking problem. It’s a doing problem. Your 18
+months of tools won’t ship a product. What ships a product is one
+specific user complaining to you on Slack. You haven’t earned that user
+yet because you keep stopping right before you’d have to ask for
+them.”</p>
+<hr />
+<h3 id="ii.2-naval-视角leverage-specific-knowledge">II.2 Naval
+视角（leverage / specific knowledge）</h3>
+<blockquote>
+<p>“Specific knowledge is found by pursuing your genuine curiosity and
+passion rather than whatever is hot right now.”</p>
+</blockquote>
+<p><strong>Naval 对你的 1 句诊断</strong>：你的 leverage
+全部集中在最低杠杆的层级。</p>
+<p>Naval 框架下你目前的 leverage stack：</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>层级</th>
+<th>形式</th>
+<th>你的状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 - Labor</td>
+<td>自己写代码</td>
+<td>✅ 投入最多（每天 6-8h）</td>
+</tr>
+<tr>
+<td>1 - Capital</td>
+<td>用钱买 leverage</td>
+<td>❌ 不会</td>
+</tr>
+<tr>
+<td>2 - Code</td>
+<td>自动化 / SaaS</td>
+<td>⚠️ 写了 3 个原型，0 个上架</td>
+</tr>
+<tr>
+<td>3 - Media</td>
+<td>内容 / audience</td>
+<td>❌ 0 follower（你删除过的草稿如果发了，已经积累 6 个月
+audience）</td>
+</tr>
+</tbody>
+</table>
+<p>最严重的问题：你删掉的 14 篇草稿是 leverage
+3（media）的原始材料。<strong>它们的删除不是”没准备好”，是 leverage 0
+的劳动正在主动摧毁 leverage 3 的资本积累</strong>。</p>
+<p>Naval 会问你的真问题： 1. <strong>“What is your specific
+knowledge?”</strong>——你目前的真实回答应该是”我知道在大厂做工程是什么感觉
++ 我读过很多 PG/Naval/Taleb”。这两个都不是 specific knowledge
+因为太多人有。但你<strong>还有一个</strong>你不愿意正视的：<strong>你知道一个高焦虑独居者
+6 个月用 18 个月时间挣扎决策然后没结果是什么感觉</strong>。这是 specific
+knowledge。但你瞧不上它，因为它”不算成就”。</p>
+<ol start="2" type="1">
+<li><strong>“What would you teach a younger
+you?”</strong>——不是”如何从字节离职”，是”如何在 4
+个月不交付任何东西后承认这本身就是数据”。</li>
+</ol>
+<p><strong>Naval 给你的处方</strong>： &gt; “Your only real asset right
+now is the 14 drafts you deleted. Republish them as-is. Don’t fix them.
+The fact that they’re unfinished is the signal. Audience for someone in
+your position comes from showing the mess, not the solution.”</p>
+<hr />
+<h3 id="ii.3-taleb-视角noise-convexity-fragility">II.3 Taleb 视角（noise
+/ convexity / fragility）</h3>
+<blockquote>
+<p>“The three most harmful addictions are heroin, carbohydrates, and a
+monthly salary.”</p>
+</blockquote>
+<p><strong>Taleb 对你的 1 句诊断</strong>：你以为你已经断了 monthly
+salary
+的瘾，但你只是把它换成了”想清楚”的瘾。两者结构相同：都是用规律性反馈喂养自尊。</p>
+<p>Taleb 的 3 个独立诊断：</p>
+<p><strong>1. 你混淆了 noise 和 signal</strong> 你过去 6 个月的 14
+篇”想清楚”草稿是 noise。你以为它们是 signal
+是因为它们是高情绪强度的内容。但 signal
+是来自外部的、反对你假设的反馈。你目前生活里 signal 数量 =
+0（因为你没有用户、没有发布、没有公开作品）。 → 你不是在 process
+information，你是在 process emotion。这两件事在你的 brain
+里使用同一套机制但产出完全不同的结果。</p>
+<p><strong>2. 你的 portfolio 是 fragile 的反面教材</strong>
+独立开发者本应是 antifragile 设计：低固定成本 + 多个低门槛实验 + 高
+upside。你的 portfolio 实际是 fragile： - 固定成本高（你有自己的房租 +
+每月 ¥X 的”我必须证明我没浪费时间”心理税） - 实验门槛高（每个项目你做
+2-4 周才停） - upside 锁死（任何一个项目都没走到能产生意外的位置）</p>
+<p>你需要的是 <strong>30 个 3-5 天的实验</strong>，不是 <strong>3 个 2-4
+周的项目</strong>。前者有 30 个机会撞到 convex 路径，后者只有 3 个。</p>
+<p><strong>3. 你的 8 个月 runway 是 fragility 的伪装</strong> 有 8 个月
+runway 让你可以慢慢”想”——但 fragile system
+的特点就是缓冲层让你看不到崩溃信号直到崩溃发生。runway 越长越危险。短
+runway 的人 1 个月没结果就被迫做下一步，长 runway 的人 6
+个月没结果都还在写草稿。</p>
+<p><strong>Taleb 给你的最重 verdict</strong>： &gt; “Cut your runway in
+half. Mentally pretend you only have 4 months. This is not a financial
+decision—your money is fine. This is an information decision. You need
+pressure to expose what ‘thinking clearly’ really means. Right now
+thinking clearly means something will never be true.”</p>
+<hr />
+<h3 id="ii.4-munger-视角mental-models-inversion">II.4 Munger
+视角（mental models / inversion）</h3>
+<blockquote>
+<p>“Invert, always invert. Tell me where I’m going to die, so I won’t go
+there.”</p>
+</blockquote>
+<p><strong>Munger 对你的 1
+句诊断</strong>：要做对一件事很难，但要列出确定会失败的几条路很容易，先剔除它们。</p>
+<p>Munger 反向思考：<strong>你怎么样会确定失败？</strong></p>
+<p>5 条确定失败的路径： 1. <strong>继续每周写”想清楚”草稿</strong>——12
+个月后你会有 60 篇草稿和 0 个用户，runway 也用完了。这是首要禁忌。 2.
+<strong>把每个项目做 2-4 周再换下一个</strong>——到 12 个月你尝试过 12
+个项目，每个都没碰到付费用户，你的 portfolio 是”12
+次半成品”。这不是经验，这是 12 次确认你”不能完成”的训练数据。 3.
+<strong>不发布任何作品 / 不积累 audience</strong>——12
+个月后你想找下一份工作，你 GitHub 还是 4 个月前那个 GitHub。一无变化。
+4. <strong>拒绝 specific knowledge
+来自”挣扎而非成就”</strong>——你坚持只在”已经做出成绩之后”才发声，那么你永远不会发声，因为你从未给”做出成绩”创造过条件。
+5. <strong>维持完全独居 + 完全无外部 commitment</strong>——人是
+commitment device 的奴隶。没有外部 commitment 你的 self-discipline
+不够把你推过任何一个小痛点。</p>
+<p>Munger 5 条 mental models 戳到的盲区：</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Model</th>
+<th>你的盲区</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incentive bias</td>
+<td>你的”想清楚”行为正在被你的焦虑奖励——焦虑减轻 = 强化反馈环</td>
+</tr>
+<tr>
+<td>Availability heuristic</td>
+<td>你脑子里”独立开发者”的样本是 Pieter Levels / <span class="citation"
+data-cites="marclou">@marclou</span> 等已经赢的人。你看不到 1000
+个失败样本</td>
+</tr>
+<tr>
+<td>Social proof</td>
+<td>你跟你前同事比较，他们都还在大厂”稳定”。这让你的不稳定显得错误</td>
+</tr>
+<tr>
+<td>Sunk cost</td>
+<td>离职 4
+个月已经是沉没成本，但你仍在用它倒推”必须做出独立结果”的压力</td>
+</tr>
+<tr>
+<td>Liking / loving tendency</td>
+<td>你喜欢 PG/Naval
+文字胜于喜欢实际去做事，这本身就是你”挑事的概念”问题的根源</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Munger 给你的处方</strong>： &gt; “Pick the one inversion
+path you’re closest to right now (#1: keep writing weekly drafts) and
+make it physically impossible. Delete the Notion folder. Block Sundays
+21:00 from being writing time. Replace with one specific external
+commitment that produces a cost if you don’t ship something. Stop trying
+to be smart. You’re already smart enough. Be stupid in the right
+direction.”</p>
+<hr />
+<h2 id="iii.-你卡住的真正位置">III. 你卡住的真正位置</h2>
+<p>不是”找不到方向”。 不是”市场不对”。 不是”时机不到”。</p>
+<p><strong>你卡住的真正位置是：你正在用’思考’来回避’被陌生人评分’。</strong></p>
+<p>更精确地说：你过去 4
+个月每一个看似不同的卡点，其实都是同一个回避动作的不同伪装：</p>
+<ul>
+<li>写”想清楚”草稿 = 用思考代替动作</li>
+<li>做项目做到 demo 阶段就换 = 用换概念代替提交评分</li>
+<li>看 PG/Naval = 用学习代替试错</li>
+<li>维持”我有 8 个月 runway 慢慢探索” = 用时间富裕代替推进</li>
+</ul>
+<p>这 4 个动作的共同结构：
+<strong>用一个让你保持自尊的活动占用你的时间，让你看起来在前进，但实际上你从未走到”会被陌生人否定”的那一步</strong>。</p>
+<p>为什么这是真问题：因为它不是”你需要更努力 / 更聪明 /
+更有方向”——这些都是 §I §III §IV 假设里的
+framing。它是一个<strong>情绪结构</strong>问题：你在过去某个时刻（很可能是离职前那个具体事件，§I
+假设 1 指向的）输过一次，那次输教会你”被陌生人否定 =
+不可承受”。从那之后你的全部生活被组织成一个回避被否定的系统。</p>
+<p>这个真问题的好消息是：它不需要你”想清楚”才能动。它需要的是<strong>做一次具体的会被否定的事，然后不死</strong>。一次就够。</p>
+<hr />
+<h2 id="iv.-challenger-反对意见-5-句最戳的">IV. Challenger 反对意见 · 5
+句最戳的</h2>
+<blockquote>
+<p>这部分是 Challenger ant 的输出。我没修——AI 写得比我狠，我留着。</p>
+</blockquote>
+<p><strong>1.</strong> 你不是 22
+岁拒绝大厂的勇敢年轻人。你是一个被一次具体的失败吓到的人，用”独立开发者”这个标签包装你的恐惧，让恐惧看起来像选择。</p>
+<p><strong>2.</strong> 你删掉的 14 篇草稿里有你的真问题。你保留的所有
+essay 和读书笔记里没有。你在保留 noise 删除 signal，并且你知道。</p>
+<p><strong>3.</strong> 你 8 个月 runway 不是优势，是慢性安乐死。短
+runway 的人 1 个月内就被迫面对你回避了 4
+个月的事。你的钱在帮你拖延变成你不想成为的那个人。</p>
+<p><strong>4.</strong> 你说你”不想立人设 / 不想露脸 /
+不想商业化我自己”，但你 X
+上每一条草稿都是带人设的。你不是不想立人设，你是在等一个能”不需要被评分就被认可”的人设出现。它不会出现。</p>
+<p><strong>5.</strong> 你 26 岁。再过 4 年你 30 岁。30
+岁前你会做一次回头审视：你是把过去 4 年用在”想清楚 + 失败几次 +
+学到东西”上，还是用在”想清楚 + 没失败过 + 没学到东西”上。前者你 30
+岁有底气，后者你 30
+岁还在写”我到底想干什么”。今天的每一周你都在选这两条路里的一条。</p>
+<hr />
+<h2 id="v.-真问题命名-一句话">V. 真问题命名 · 一句话</h2>
+<blockquote>
+<p><strong>你的真问题不是「找方向」，是「在不确定方向的状态下完成一次会被陌生人评分的提交」。</strong></p>
+</blockquote>
+<p>把”找方向”从你的待办清单里划掉。它不是一个问题，它是一个症状。</p>
+<p>把它替换成：“<strong>在 14
+天内完成一次会被陌生人评分的提交</strong>”。具体什么提交不重要——重要的是它必须满足
+3 个条件： 1. 有具体的陌生人会看到（不是给朋友看） 2.
+有可以失败的明确指标（不是模糊的”反馈”） 3. 完成提交的时间 ≤ 5 天，不是
+4 周</p>
+<hr />
+<h2 id="vi.-6-个月可验证假设清单-下一步动作">VI. 6 个月可验证假设清单 +
+下一步动作</h2>
+<h3 id="个月分阶段">6 个月分阶段</h3>
+<p><strong>Month 1-2 · 痛点暴露期</strong> - 主任务：完成 6-8
+次”被陌生人评分的提交”。每次 ≤ 5 天，主题不限 - 不可妥协指标：每月 ≥ 3
+次提交（任何形式：发推 / 上线 demo / 卖东西 / 讲一次直播） - 停止信号
+1：第 4 周仍未完成 ≥ 3 次提交 → 触发 emergency 配置（找一个真实社群每周
+check-in，外部 commitment 接管） - 停止信号
+2：完成提交但全部对自己屏蔽反馈 → 你回避点不在”提交”，在”看到反馈”。换成
+§IV 反对 #4 的版本重审</p>
+<p><strong>Month 3-4 · 信号筛选期</strong> - 主任务：从 Month 1-2 的 6-8
+次提交里挑出获得 ≥1 个真实正反馈（陌生人主动发消息 / 付费 /
+重复访问）的方向，2x 投入 - 不可妥协指标：≥ 1 个方向有 ≥ 5
+个真实陌生用户 - 停止信号 1：6-8 次提交没有任何方向得到 ≥ 1 个真实正反馈
+→ 不是方向问题，是定位问题，回到 §I 假设 5 重审”你以为 audience 在哪 vs
+实际在哪” - 停止信号 2：得到正反馈但你”不感兴趣” → §IV 反对 #4
+再读一次</p>
+<p><strong>Month 5-6 · 第一次商业化期</strong> - 主任务：把 Month 3-4
+筛出来的方向做成一个能收第一笔钱的具体物（产品 / 服务 / 内容 /
+课程都行） - 不可妥协指标：收到第一笔陌生人付费（即使是 ¥9.9） -
+停止信号 1：5 个月仍 0 收入 →
+你不是”独立开发者”，是”独立学习者”。承认它，要么转专职 indie hacker
+bootcamp 要么找份班继续养这个学习路径 - 停止信号
+2：收到付费但每次都觉得”对方被骗了” → §IV 反对 #1 再读一次</p>
+<h3 id="下一步动作-top-348-小时内">下一步动作 · Top 3（48 小时内）</h3>
+<p><strong>Action 1 · 24 小时内</strong> 公开发布你的 14 篇 Notion
+“想清楚” 草稿中的 3 篇（不修改、不”完善”、原样发）。发到 X / 即刻任何 1
+个平台都行。如果心理上做不到原样发，至少发一篇带”这是 6
+个月前我写的草稿，写到一半就停了，我现在不打算写完了”前言的版本。
+这一个动作完成的真实意义：第一次让”草稿”从私人焦虑产物变成公共信号。Naval
+视角的 leverage 3 启动。</p>
+<p><strong>Action 2 · 7 天内</strong> 联系 1 个你过去 6
+个月私下聊过”独立开发”话题的人，约一次 30 分钟语音/咖啡。告诉他你在 14
+天内要做一次”被陌生人评分的提交”，让他做你的 commitment partner——14
+天后你必须给他看你交付了什么。给不出 = 给他 ¥500（让钱真的疼）。
+这一个动作完成的真实意义：用外部 commitment
+强行打破”我可以慢慢想”。Munger 处方启动。</p>
+<p><strong>Action 3 · 14 天内</strong>
+完成第一次”被陌生人评分的提交”。最简单的版本：把你 4 个月里 3
+个项目里<strong>最不害怕暴露</strong>的那个，按现状（带 bug
+带未完成功能）放到 Hacker News / Reddit / Twitter / 即刻，只要有 ≥10
+个陌生人能看到。不要先润色
+README，不要先写”这是为什么我要做这个”长文，不要先确认”市场对不对”。
+这一个动作完成的真实意义：第一次走到 §III 真问题的现场。1
+次成功就够终结你过去 4 个月的整个回避结构。</p>
+<hr />
+<h2 id="vii.-报告-footer">VII. 报告 footer</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td>报告版本</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>AI 协作</td>
+<td>Mira-OS Multi-Agent Panel</td>
+</tr>
+<tr>
+<td>AI 视角调用</td>
+<td>PG-perspective skill v3.2 / naval-perspective v2.8 /
+taleb-perspective v3.0 / munger-perspective v2.5 / Challenger v1.7</td>
+</tr>
+<tr>
+<td>AI 草稿生成时间</td>
+<td>~6h</td>
+</tr>
+<tr>
+<td>人工重写时间</td>
+<td>~5h</td>
+</tr>
+<tr>
+<td>人工审校签名</td>
+<td>Mira（2026-04-29）</td>
+</tr>
+<tr>
+<td>客户原始材料保留期</td>
+<td>30 天后本地删除</td>
+</tr>
+<tr>
+<td>Testimonial 状态</td>
+<td>待客户二次确认</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="附录-反-self-help-声明">附录 · 反 self-help 声明</h2>
+<p>这份报告不让你感觉好。如果你读完它感觉”被理解了 /
+被治愈了”，请告诉我，我重写一版——它跑歪了。</p>
+<p>正确的反应是： - 一定的不适感 - 想反驳几条但反驳不到位 - 至少有 1-2
+句让你”啊操，确实” - 想把报告关掉但又想再读一遍 §III §IV - 24
+小时内某个时刻，意识到 Action 1 / 2 / 3 中的某一个其实你今天就能开始</p>
+<p>如果以上反应都没有，要么我没写到位（你可以骂我，我重写），要么这套方法不适合你（也行，全额退）。</p>
+</div>
+
+<div class="cta-bottom">
+<div style="font-size: 14px; opacity: 0.7;">这是公开样章。你的报告会针对你的具体处境，由 AI 集团 4 视角 + Challenger 重新生成。</div>
+<a href="./#order">早鸟 ¥999 / $149 — 立即预订</a>
+</div>
+</div>
+</body>
+</html>
