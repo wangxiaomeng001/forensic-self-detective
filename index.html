@@ -12,10 +12,7 @@
      也可用 Umami Cloud: https://umami.is (永久免费 tier)
      TODO: 把 data-domain 替换为你的实际域名
      ============================================================ -->
-<script defer data-domain="PLAUSIBLE_DOMAIN_HERE" src="https://plausible.io/js/script.js"></script>
-<!-- 备用: Umami Cloud (永久免费，换这行):
-<script async src="https://analytics.umami.is/script.js" data-website-id="UMAMI_WEBSITE_ID_HERE"></script>
--->
+<!-- analytics disabled v0 — 注册 Plausible/Umami 后再启 -->
 
 <!-- Lemon Squeezy Overlay JS (国际付款用) -->
 <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
@@ -513,8 +510,8 @@
     <p>22 岁，独立研究者。过去 18 个月用这套多 agent 系统给自己做了约 30 次 forensic 自审，这份服务是把工具对外开放的第一版。卖的是方法和工具，不是人生导师资格。</p>
     <p style="margin-top:8px;font-size:13px;color:#888;">
       <!-- TODO: 替换为真实联系方式 -->
-      X: <a href="https://x.com/TWITTER_HANDLE_HERE" style="color:#1a1a1a;">@TWITTER_HANDLE_HERE</a> ·
-      邮件: <a href="mailto:CONTACT_EMAIL_HERE" style="color:#1a1a1a;">CONTACT_EMAIL_HERE</a>
+      X: <a href="https://x.com/belly_echer" style="color:#1a1a1a;">@belly_echer</a> ·
+      邮件: <a href="mailto:2436457557w@gmail.com" style="color:#1a1a1a;">2436457557w@gmail.com</a>
     </p>
   </div>
 </div>
@@ -566,12 +563,10 @@
 <div class="email-capture">
   <h3>¥999 还没准备好？先订阅免费试读</h3>
   <p>不定期发方法论文章（Forensic 报告的思路碎片）。订阅 = 下次发布时你先知道。</p>
-  <!-- Formspree 免费收 email，注册 formspree.io 拿 form ID 替换下面的 action -->
-  <!-- TODO: 注册 https://formspree.io (免费，无信用卡) 拿 Form ID，替换 FORMSPREE_FORM_ID_HERE -->
-  <form action="https://formspree.io/f/FORMSPREE_FORM_ID_HERE" method="POST">
+  <!-- v0 mailto fallback (Formspree 未注册) -->
+  <form id="subscribeForm" onsubmit="event.preventDefault(); window.location.href='mailto:2436457557w@gmail.com?subject=SKU1%20Landing%20%E8%AE%A2%E9%98%85&body=%E8%AE%A2%E9%98%85%E9%82%AE%E7%AE%B1%EF%BC%9A'+encodeURIComponent(this.elements.email.value);">
     <div class="email-capture-row">
       <input type="email" name="email" placeholder="你的邮箱" required>
-      <input type="hidden" name="_subject" value="SKU1 Landing 订阅">
       <button type="submit">订阅试读</button>
     </div>
   </form>
@@ -600,12 +595,8 @@
 <h3 style="margin-top:32px;">步骤 1：先填订单表单（3 分钟）</h3>
 <p style="font-size:14px;color:#666;">填完我会在 24 小时内邮件确认是否匹配。确认后你才付款。匹配不上我会直接说，不收钱不浪费时间。</p>
 
-<!-- ============================================================
-     FORMSPREE 表单 — 免费 tier 每月 50 次提交足够早期
-     TODO: 注册 https://formspree.io → New Form → 复制 Form ID
-           把 action 里的 FORMSPREE_FORM_ID_HERE 替换掉
-     ============================================================ -->
-<form action="https://formspree.io/f/FORMSPREE_FORM_ID_HERE" method="POST">
+<!-- v0 mailto fallback (Formspree 未注册；提交后开邮箱客户端填 body) -->
+<form id="orderForm" onsubmit="event.preventDefault(); const f=this.elements; const body=encodeURIComponent('=== Forensic 自我侦探报告 · 下单申请 ===\n\n邮箱：'+f.email.value+'\n昵称：'+f.name.value+'\n年龄+状态：'+f.status.value+'\n\n反复纠结的决策：\n'+f.decision.value+'\n\n来源：'+f.source.value+'\n\n--\n（提交后我会在 24h 内回邮件确认匹配 + 发收款方式）'); window.location.href='mailto:2436457557w@gmail.com?subject=SKU1%20%E6%96%B0%E8%AE%A2%E5%8D%95&body='+body;">
   <div class="form-group">
     <label>邮箱（用于交付报告和确认）</label>
     <input type="email" name="email" required>
@@ -626,7 +617,6 @@
     <label>怎么找到这个页面的</label>
     <input type="text" name="source" placeholder="X / 即刻 / 朋友推荐 / 其他">
   </div>
-  <input type="hidden" name="_subject" value="SKU1 新订单">
   <button type="submit" class="cta" style="width:100%;padding:15px;margin-top:8px;">提交申请（不付款）→</button>
 </form>
 
@@ -637,55 +627,31 @@
   <!-- ============================================================
        国内付款 — 知识星球入圈（微信支付）
        TODO: 注册知识星球 App → 创建付费圈 → 复制邀请链接
-             替换 ZSXQ_JOIN_URL_HERE
+       v0 DM 私收模式 — 第 1 单走 1v1 intake，dashboard 收款集成赴港后 wire
        ============================================================ -->
-  <a href="ZSXQ_JOIN_URL_HERE" class="pay-option" target="_blank" rel="noopener">
-    <div class="label">微信 / 知识星球</div>
-    <div class="currency">¥999</div>
-    <div class="sub">国内用户推荐 · 微信直付</div>
+  <a href="https://x.com/messages/compose?recipient_id=belly_echer" class="pay-option" target="_blank" rel="noopener">
+    <div class="label">DM 我收款</div>
+    <div class="currency">¥999 / $149</div>
+    <div class="sub">X · @belly_echer · 私下发支付宝/微信/PayPal</div>
   </a>
 
-  <!-- ============================================================
-       国际付款（首选 Creem.io）— 支持信用卡，提现到支付宝
-       TODO: 注册 https://creem.io → 创建 Product → 复制 Checkout URL
-             替换 CREEM_CHECKOUT_URL_HERE
-       ============================================================ -->
-  <a href="CREEM_CHECKOUT_URL_HERE" class="pay-option" target="_blank" rel="noopener">
-    <div class="label">信用卡 / Creem</div>
-    <div class="currency">$149</div>
-    <div class="sub">国际用户 · Visa/MC/PayPal</div>
-  </a>
-
-  <!-- ============================================================
-       国际付款（备用 Lemon Squeezy）— lemonsqueezy-button class 触发 overlay
-       TODO: 注册 https://app.lemonsqueezy.com → 创建 Product → 复制 Checkout URL
-             替换 LEMON_SQUEEZY_CHECKOUT_URL_HERE
-       ============================================================ -->
-  <a href="LEMON_SQUEEZY_CHECKOUT_URL_HERE" class="pay-option lemonsqueezy-button" target="_blank" rel="noopener">
-    <div class="label">Lemon Squeezy</div>
-    <div class="currency">$149</div>
-    <div class="sub">备用国际通道 · 弹窗付款</div>
+  <a href="mailto:2436457557w@gmail.com?subject=Forensic%20%E6%8A%A5%E5%91%8A%20%E4%BB%98%E6%AC%BE%E6%96%B9%E5%BC%8F&body=%E6%88%91%E5%B7%B2%E5%A1%AB%E5%AE%8C%E4%B8%8B%E5%8D%95%E8%A1%A8%E5%8D%95%EF%BC%8C%E8%AF%B7%E5%8F%91%E6%94%AF%E4%BB%98%E6%96%B9%E5%BC%8F%E3%80%82%0A%0A%E4%BB%98%E6%AC%BE%E5%81%8F%E5%A5%BD%EF%BC%9A%E2%96%A1%20%E6%94%AF%E4%BB%98%E5%AE%9D%20%E2%96%A1%20%E5%BE%AE%E4%BF%A1%20%E2%96%A1%20PayPal" class="pay-option" target="_blank" rel="noopener">
+    <div class="label">邮件取付款方式</div>
+    <div class="currency">¥999 / $149</div>
+    <div class="sub">2436457557w@gmail.com · 24h 内回</div>
   </a>
 </div>
+<p style="font-size:13px;color:#888;margin-top:8px;text-align:center;">支付方式：支付宝 / 微信 / PayPal · 国际付款 ≈ $149 USD · 收到付款 24h 内开始 intake</p>
 
 <div class="footer-note" style="margin-top:24px;">
 本服务为信息整理与思维实验，不构成医疗、心理、法律、投资建议。具体合规边界详见 FAQ。
 </div>
 
-<div style="margin-top:32px;padding:24px;background:#f5f5f3;border-radius:8px;">
-  <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#999;margin-bottom:8px;">姊妹站</div>
-  <div style="font-size:18px;font-weight:600;margin-bottom:8px;">
-    <a href="https://wangxiaomeng001.github.io/forensic-onchain/" style="color:#1a1a1a;text-decoration:none;border-bottom:1px solid #1a1a1a;">Forensic Onchain · 链上验尸官</a>
-  </div>
-  <div style="color:#555;font-size:14px;">
-    每周 1 篇 Web3 forensic newsletter。中文 ¥69/月 + 英文 $15/月。第一篇免费：
-    <a href="https://wangxiaomeng001.github.io/forensic-onchain/issue-01.html" style="color:#1a1a1a;">Monad 翻桌之后 →</a>
-  </div>
-</div>
-
 <div class="meta">
-  联系：邮件 <a href="mailto:2436457557w@gmail.com" style="color:#1a1a1a;">2436457557w@gmail.com</a><br>
-  最后更新：2026-04-30 · v2 + sister site + 邮箱 placeholder fix
+  <!-- TODO: 替换为真实 Twitter handle 和邮箱 -->
+  联系：DM <a href="https://x.com/belly_echer" style="color:#1a1a1a;">@belly_echer</a> ·
+  邮件 <a href="mailto:2436457557w@gmail.com" style="color:#1a1a1a;">2436457557w@gmail.com</a><br>
+  最后更新：2026-04-30 · v2（付款集成 + tracking + email capture）
 </div>
 
 </div><!-- /container -->
